@@ -1,0 +1,19 @@
+{
+  "name": "@bako-ui/design-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bako Design System",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "workspaces": [
+    "./packages/*"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "^1.6.3",
+    "turbo": "^1.13.1"
+  }
+}
