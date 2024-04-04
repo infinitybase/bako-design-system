@@ -2,12 +2,12 @@ import type { StorybookConfig } from "@storybook/react-vite";
 
 import { dirname, join } from "node:path";
 
-function getAbsolutePath(value: string): any {
+function getAbsolutePath(value: string) {
   return dirname(require.resolve(join(value, "package.json")));
 }
 
 const config: StorybookConfig = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  stories: ["../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
     getAbsolutePath("@storybook/addon-onboarding"),
     getAbsolutePath("@storybook/addon-links"),
@@ -16,6 +16,7 @@ const config: StorybookConfig = {
     getAbsolutePath("@chakra-ui/storybook-addon"),
   ],
   framework: {
+    // @ts-ignore
     name: getAbsolutePath("@storybook/react-vite"),
     options: {},
   },
