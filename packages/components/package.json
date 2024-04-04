@@ -33,7 +33,9 @@
     "directory": "packages/components"
   },
   "scripts": {
-    "build": "tsup src/index.ts --config tsup.config.ts"
+    "build": "tsup src/index.ts --config tsup.config.ts",
+    "storybook": "sb dev -p 6006",
+    "build-storybook": "sb build"
   },
   "peerDependencies": {
     "@chakra-ui/react": ">=2.8.2",
@@ -44,6 +46,16 @@
     "react-dom": ">=18.0.0"
   },
   "devDependencies": {
+    "@chakra-ui/storybook-addon": "^5.1.0",
+    "@storybook/addon-essentials": "^8.0.5",
+    "@storybook/addon-interactions": "^8.0.5",
+    "@storybook/addon-links": "^8.0.5",
+    "@storybook/addon-onboarding": "^8.0.5",
+    "@storybook/blocks": "^8.0.5",
+    "@storybook/cli": "^8.0.5",
+    "@storybook/react": "^8.0.5",
+    "@storybook/react-vite": "^8.0.5",
+    "@storybook/test": "^8.0.5",
     "@types/react": "^18.2.74",
     "tsup": "^8.0.2"
   }
