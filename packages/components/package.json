@@ -1,0 +1,50 @@
+{
+  "name": "@bako-ui/components",
+  "version": "0.1.0",
+  "description": "Chakra-ui components of Bako",
+  "source": "src/index.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./src": {
+      "default": "./src/index.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/infinitybase/bako-design-system",
+    "directory": "packages/components"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --config tsup.config.ts"
+  },
+  "peerDependencies": {
+    "@chakra-ui/react": ">=2.8.2",
+    "@emotion/react": ">=11.11.0",
+    "@emotion/styled": ">=11.11.0",
+    "framer-motion": ">=11.0.0",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.74",
+    "tsup": "^8.0.2"
+  }
+}
